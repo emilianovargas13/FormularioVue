@@ -89,8 +89,8 @@
             v-model="form.image"
             :state="validateImage()"
             accept=".png"
-            placeholder="Selecciona una imagen PNG (máximo 5 MB)"
-            :max-size="5000000">
+            placeholder="Selecciona una imagen PNG (máximo 3 MB)"
+            :max-size="3000000"> 
 
         </b-form-file>
         </b-form-group>
@@ -150,7 +150,7 @@
       },
   
       validateImage() {
-        const maxSize = 5000000; 
+        const maxSize = 3000000; 
         if (this.form.image) {
           
           if (!this.form.image.name.toLowerCase().endsWith(".png")) {
